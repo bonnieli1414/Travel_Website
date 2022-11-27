@@ -1,0 +1,119 @@
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 900;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 900;
+}
+p {
+    line-height: 1.5;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 0.8;
+    font-weight: 900;
+}
+img {
+    max-width: 100%;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header a {
+    padding: 24px;
+}
+header {
+    background-color: #81b3d0;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header .container {
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    justify-content: end;
+    font-size: 24px;
+}
+footer {
+    text-align: center;
+    background-color: #ebedf0;
+    padding: 24px;
+}
+article {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+article h4 {
+    padding: 12px;
+}
+article p {
+    text-indent: 2rem;
+    padding: 8px;
+}
+article table {
+    font-size: 24px;
+    margin: 24px auto;
+    text-align: center;
+}
+article thead{
+    font-weight: 900;
+    padding: 8px;
+}
+article th,tr,td {
+    padding: 8px;
+    border: 1px solid #000;
+}
+article td {
+    vertical-align: middle;
+    background-color: #e7e7e7;
+}
+aside {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.d-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.width-20 {
+    width: 20%;
+}
+.width-index {
+    width: 300px;
+}
+.width-80 {
+    width: 80%;
+}
+.width-100 {
+    width: 100%;
+}
+aside h2 {
+    text-align: center;
+    padding: 12px;
+}
+aside a {
+    padding: 12px;
+}

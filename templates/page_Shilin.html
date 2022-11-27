@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 原css引入語法 -->
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <!-- 改用jinja2模板的引入語法 -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>景點介紹</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>熱門景點</h1>
+            <nav>
+                <ul>
+                    <li class="nav-list"><a href="{{ url_for('page_Shilin') }}">士林官邸</a></li>
+                    <li class="nav-list"><a href="{{ url_for('page_Beitou') }}">北投圖書館</a></li>
+                    <li class="nav-list"><a href="{{ url_for('page_Maokong') }}">貓空纜車</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <footer>
+        <p>&copy; 2022 - This is footer of website.</p>
+    </footer>
+
+    <!-- 原js引入語法 -->
+    <script src="../static/script.js"></script>
+    <!-- <script src="../static/script.js"></script> -->
+    <!-- 改用jinja2模板的引入語法 -->
+    <!-- 改用jinja2模板的引入語法 -->
+    <script type = "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
