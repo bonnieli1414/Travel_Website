@@ -1,82 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 原css引入語法 -->
-    <!-- <link rel="stylesheet" href="../static/style.css"> -->
-    <!-- 改用jinja2模板的引入語法 -->
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <title>景點介紹</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}景點介紹{% endblock title %}
 
-    <header>
-        <div class="container">
-            <h1><a href="{{ url_for('index') }}" title="首頁">熱門景點</a></h1>
-            <nav>
-                <ul>
-                    <li class="nav-list"><a href="{{ url_for('page_Shilin') }}">士林官邸</a></li>
-                    <li class="nav-list"><a href="{{ url_for('page_Beitou') }}">北投圖書館</a></li>
-                    <li class="nav-list"><a href="{{ url_for('page_Maokong') }}">貓空纜車</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+{% block content %}
 
-    <div class="container">
-        <article>
-            <section>
-                <h2>景點介紹</h2>
-                <br><br>
-                <div class="flex-center">
-                    <img src="https://www.travel.taipei/content/images/attractions/221368/1024x768_attractions-image-pajdr7p5jkyrn3_utff_pw.jpg" alt="">
-                </div>
-                <p>
-                    北投圖書館是臺灣首座綠建築圖書館，位於北投公園內，與北投溫泉博物館比鄰，地下一層、地上二層。整個建築採用環保綠能方式建造，屋頂為輕質生態材質，並設有太陽能光電板發電，綠化屋頂及斜坡草皮可自然排水至雨水回收槽，再回收利用澆灌植栽及沖水馬桶，不但綠化整座圖書館並減少水資源浪費。於民國101年（西元2012年）獲得美國網站Flavorwire.com評選為「全球最美25座公立圖書館」之一。
-                </p>
-                <h4>交通資訊</h4>
-                <p>（交通資訊常有變動，出發前請先向各交通場站確認。）</p>
-                <ul>
-                    <li>
-                        <p>自行開車：</p>
-                        <p>國道1號-環北交流道下-環河北路二段至三段-延平北路六段至七段-洲美快速道路-大業路-光明路。</p>
-                    </li>
-                    <li>
-                        <p>大眾運輸：</p>
-                        <p>搭高鐵或臺鐵至臺北站下-轉搭臺北捷運至新北投站下。</p>
-                    </li>
-                </ul>
-                <div class="flex-center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9816542361978!2d121.50411651545167!3d25.136311083924525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae44dacc500b%3A0xc8f479e8fd6e0a1d!2z6Ie65YyX5biC56uL5ZyW5pu46aSoIOWMl-aKleWIhumkqA!5e0!3m2!1szh-TW!2stw!4v1669564140562!5m2!1szh-TW!2stw" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <h4>玩賞攻略</h4>
-                <ul>
-                    <li>全臺首座且名列世界級的綠建築圖書館</li>
-                    <li>圖書館原木建築外觀，怎麼拍怎麼美</li>
-                    <li>館內拍攝需於館內填寫申請表，且應注意音量及勿用閃光燈</li>
-                    <li>周邊順遊景點：新北投車站、北投公園、溫泉博物館、地熱谷、凱達格蘭文化館</li>
-                </ul>
-            </section>
-        </article>
-        <aside>
-            <h3>美食推薦</h3>
+<div class="container">
+    <article>
+        <section>
+            <h2>景點介紹</h2>
+            <br><br>
+            <div class="flex-center">
+                <img src="https://www.travel.taipei/content/images/attractions/221368/1024x768_attractions-image-pajdr7p5jkyrn3_utff_pw.jpg" alt="">
+            </div>
+            <p>
+                北投圖書館是臺灣首座綠建築圖書館，位於北投公園內，與北投溫泉博物館比鄰，地下一層、地上二層。整個建築採用環保綠能方式建造，屋頂為輕質生態材質，並設有太陽能光電板發電，綠化屋頂及斜坡草皮可自然排水至雨水回收槽，再回收利用澆灌植栽及沖水馬桶，不但綠化整座圖書館並減少水資源浪費。於民國101年（西元2012年）獲得美國網站Flavorwire.com評選為「全球最美25座公立圖書館」之一。
+            </p>
+            <h4>交通資訊</h4>
+            <p>（交通資訊常有變動，出發前請先向各交通場站確認。）</p>
             <ul>
-                <li><a target="_blank" href="https://www.newenjoy.com.tw/index">北投新上享餐廳</a></li>
-                <li><a target="_blank" href="https://wujia3686.weebly.com/">吳家牛肉麵店</a></li>
+                <li>
+                    <p>自行開車：</p>
+                    <p>國道1號-環北交流道下-環河北路二段至三段-延平北路六段至七段-洲美快速道路-大業路-光明路。</p>
+                </li>
+                <li>
+                    <p>大眾運輸：</p>
+                    <p>搭高鐵或臺鐵至臺北站下-轉搭臺北捷運至新北投站下。</p>
+                </li>
             </ul>
-        </aside>
-    </div>
+            <div class="flex-center">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9816542361978!2d121.50411651545167!3d25.136311083924525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae44dacc500b%3A0xc8f479e8fd6e0a1d!2z6Ie65YyX5biC56uL5ZyW5pu46aSoIOWMl-aKleWIhumkqA!5e0!3m2!1szh-TW!2stw!4v1669564140562!5m2!1szh-TW!2stw" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <h4>玩賞攻略</h4>
+            <ul>
+                <li>全臺首座且名列世界級的綠建築圖書館</li>
+                <li>圖書館原木建築外觀，怎麼拍怎麼美</li>
+                <li>館內拍攝需於館內填寫申請表，且應注意音量及勿用閃光燈</li>
+                <li>周邊順遊景點：新北投車站、北投公園、溫泉博物館、地熱谷、凱達格蘭文化館</li>
+            </ul>
+        </section>
+    </article>
+    <aside>
+        <h3>美食推薦</h3>
+        <ul>
+            <li><a target="_blank" href="https://www.newenjoy.com.tw/index">北投新上享餐廳</a></li>
+            <li><a target="_blank" href="https://wujia3686.weebly.com/">吳家牛肉麵店</a></li>
+        </ul>
+    </aside>
+</div>
 
-    <footer>
-        <p>&copy; 2022 - This is footer of website.</p>
-    </footer>
-
-    <!-- 原js引入語法 -->
-    <script src="../static/script.js"></script>
-    <!-- 改用jinja2模板的引入語法 -->
-    <script type = "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+{% endblock content %}

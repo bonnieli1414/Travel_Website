@@ -1,70 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 原css引入語法 -->
-    <!-- <link rel="stylesheet" href="../static/style.css"> -->
-    <!-- 改用jinja2模板的引入語法 -->
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/reset.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
-    <title>景點介紹</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}景點介紹{% endblock title %}
 
-    <header>
-        <div class="container">
-            <h1><a href="{{ url_for('index') }}" title="首頁">熱門景點</a></h1>
-            <nav>
-                <ul>
-                    <li class="nav-list"><a href="{{ url_for('page_Shilin') }}">士林官邸</a></li>
-                    <li class="nav-list"><a href="{{ url_for('page_Beitou') }}">北投圖書館</a></li>
-                    <li class="nav-list"><a href="{{ url_for('page_Maokong') }}">貓空纜車</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+{% block content %}
 
-    <div class="container">
-        <article>
-            <section>
-                <h2>體驗異國風情 2021 士林官邸鬱金香展(台北畫刊110年2月)</h2>
-                <br><br>
-                <h4>士林官邸故事播放</h4>
-                <audio controls>
-                    <source src="{{ url_for('static',filename='audio/audio01.mp3') }}" type="audio/mpeg">
-                </audio>
-                <br>
-                <p>「2021 士林官邸鬱金香展——荷你相遇」展出來自荷蘭及日本的11 萬株鬱金香，讓民眾在新年開春就能觀賞到色彩繽紛的鬱金香花海，展區中可以看到代表土耳其的熱氣球、荷蘭的風車及木鞋和日本祈福鐘及鳥居，帶領民眾一同沉浸在異國風情中，感受春花浪漫。</p>
-                <div class="flex-center">
-                    <img src="https://travel.taipei/image/208336/?r=1612749270720" alt="鬱金香">
-                </div>
-                <p>花展期間，民眾不僅可以免費觀賞五顏六色、造型特殊的鬱金香，現場更由知名3D 手繪畫家洪榮傑，以3D 手繪方式打造荷蘭運河縮影，增添身歷其境的氛圍。此次花展更串聯周邊30 家以上店家，於展出期間推出限定商品與優惠，如鬱金香造型手作甜點、飯店獨家賞花配套行程等，歡迎大家前來觀賞美麗花季。</p>
-                <div class="flex-center">
-                    <img src="https://travel.taipei/image/208337/?r=1612749276226" alt="鬱金香">
-                </div>
-                <p>此外，近期因疫情持續延燒，賞花不忘防疫，提醒大家戴口罩來賞花，並遵守相關防疫規定，現場活動將視疫情彈性調整，相關資訊請關注活動官網和「士林官邸旅客」粉絲團動態消息。</p>
-            </section>
-        </article>
-        <aside>
-            <h3>美食推薦</h3>
-            <ul>
-                <li><a target="_blank" href="https://villager.com.tw/">廚窗港點 士林官邸店</a></li>
-                <li><a target="_blank" href="https://italian-restaurant-1837.business.site/">歐品鄉廚</a></li>
-            </ul>
-        </aside>
-    </div>
+<div class="container">
+    <article>
+        <section>
+            <h2>體驗異國風情 2021 士林官邸鬱金香展(台北畫刊110年2月)</h2>
+            <br><br>
+            <h4>士林官邸故事播放</h4>
+            <audio controls>
+                <source src="{{ url_for('static',filename='audio/audio01.mp3') }}" type="audio/mpeg">
+            </audio>
+            <br>
+            <p>「2021 士林官邸鬱金香展——荷你相遇」展出來自荷蘭及日本的11 萬株鬱金香，讓民眾在新年開春就能觀賞到色彩繽紛的鬱金香花海，展區中可以看到代表土耳其的熱氣球、荷蘭的風車及木鞋和日本祈福鐘及鳥居，帶領民眾一同沉浸在異國風情中，感受春花浪漫。</p>
+            <div class="flex-center">
+                <img src="https://travel.taipei/image/208336/?r=1612749270720" alt="鬱金香">
+            </div>
+            <p>花展期間，民眾不僅可以免費觀賞五顏六色、造型特殊的鬱金香，現場更由知名3D 手繪畫家洪榮傑，以3D 手繪方式打造荷蘭運河縮影，增添身歷其境的氛圍。此次花展更串聯周邊30 家以上店家，於展出期間推出限定商品與優惠，如鬱金香造型手作甜點、飯店獨家賞花配套行程等，歡迎大家前來觀賞美麗花季。</p>
+            <div class="flex-center">
+                <img src="https://travel.taipei/image/208337/?r=1612749276226" alt="鬱金香">
+            </div>
+            <p>此外，近期因疫情持續延燒，賞花不忘防疫，提醒大家戴口罩來賞花，並遵守相關防疫規定，現場活動將視疫情彈性調整，相關資訊請關注活動官網和「士林官邸旅客」粉絲團動態消息。</p>
+        </section>
+    </article>
+    <aside>
+        <h3>美食推薦</h3>
+        <ul>
+            <li><a target="_blank" href="https://villager.com.tw/">廚窗港點 士林官邸店</a></li>
+            <li><a target="_blank" href="https://italian-restaurant-1837.business.site/">歐品鄉廚</a></li>
+        </ul>
+    </aside>
+</div>
 
-    <footer>
-        <p>&copy; 2022 - This is footer of website.</p>
-    </footer>
-
-    <!-- 原js引入語法 -->
-    <script src="../static/script.js"></script>
-    <!-- <script src="../static/script.js"></script> -->
-    <!-- 改用jinja2模板的引入語法 -->
-    <!-- 改用jinja2模板的引入語法 -->
-    <script type = "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+{% endblock content %}
