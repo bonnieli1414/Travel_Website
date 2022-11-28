@@ -15,7 +15,7 @@
 
     <header>
         <div class="container">
-            <h1>熱門景點</h1>
+            <h1><a href="{{ url_for('index') }}" title="首頁">熱門景點</a></h1>
             <nav>
                 <ul>
                     <li class="nav-list"><a href="{{ url_for('page_Shilin') }}">士林官邸</a></li>
@@ -33,7 +33,7 @@
                 <br><br>
                 <h4>士林官邸故事播放</h4>
                 <audio controls>
-                    <source src="audio/audio01.mp3" type="audio/mpeg">
+                    <source src="{{ url_for('static',filename='audio/audio01.mp3') }}" type="audio/mpeg">
                 </audio>
                 <br>
                 <p>「2021 士林官邸鬱金香展——荷你相遇」展出來自荷蘭及日本的11 萬株鬱金香，讓民眾在新年開春就能觀賞到色彩繽紛的鬱金香花海，展區中可以看到代表土耳其的熱氣球、荷蘭的風車及木鞋和日本祈福鐘及鳥居，帶領民眾一同沉浸在異國風情中，感受春花浪漫。</p>

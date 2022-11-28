@@ -15,7 +15,7 @@
 
     <header>
         <div class="container">
-            <h1>熱門景點</h1>
+            <h1><a href="{{ url_for('index') }}" title="首頁">熱門景點</a></h1>
             <nav>
                 <ul>
                     <li class="nav-list"><a href="{{ url_for('page_Shilin') }}">士林官邸</a></li>
@@ -76,7 +76,6 @@
 
     <!-- 原js引入語法 -->
     <script src="../static/script.js"></script>
-    <!-- <script src="../static/script.js"></script> -->
     <!-- 改用jinja2模板的引入語法 -->
     <script type = "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
