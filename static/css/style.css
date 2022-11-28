@@ -1,3 +1,6 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
 h1 {
     font-size: 36px;
     font-weight: 900;
@@ -32,6 +35,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrap {
+    padding-top: 15px;
+	padding-bottom: 15px;
+    background: url(../images/color-tile.png) left bottom repeat-x, url(../images/color-tile.png) left top repeat-x;
+    background-color: #FFF;
 }
 header a {
     padding: 24px;
